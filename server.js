@@ -1,20 +1,8 @@
 var express = require('express');
 var app = express();
 var PORT = 3000;
+var middleware = require('./middleware.js');
 
-var middleware = {
-	requireAuthentication : function(req,res,next){
-
-		console.log('private route hit!IS what makes git sexy');
-		next();
-
-	},
-
-	logger:function(req,res,next){
-		console.log(req.method + ' ' + req.originalUrl + ' ' + new Date().toString());
-		next();
-	}
-};
 
 app.use(middleware.logger);
 
