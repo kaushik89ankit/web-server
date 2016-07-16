@@ -5,7 +5,7 @@ var PORT = 3000;
 var middleware = {
 	requireAuthentication : function(req,res,next){
 
-		console.log('private route hit!');
+		console.log('private route hit!IS what makes git sexy');
 		next();
 
 	},
